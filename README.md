@@ -17,6 +17,9 @@ http://127.0.0.1:4000/regenspeeder/lic?bandWidth=1G&mac=00:00:00:00:00:00&expire
 上述例子会为`00:00:00:00:00:00`MAC地址网卡生成一个速度上限1Gpbs和到期时间为`2023-03-03`的授权文件
 
 锐速心跳包访问地址, 您可以通过配置Nginx与Hosts来强制指定访问:
+* my.serverspeeder.com
+* www.serverspeeder.com
+* dl.serverspeeder.com
 ```
 http://127.0.0.1:4000/ac.do
 ```
