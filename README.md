@@ -21,5 +21,14 @@ http://127.0.0.1:4000/regenspeeder/lic?bandWidth=1G&mac=00:00:00:00:00:00&expire
 * www.serverspeeder.com
 * dl.serverspeeder.com
 ```
-http://127.0.0.1:4000/ac.do
+server {
+    listen          80;
+    server_name     my.serverspeeder.com www.serverspeeder.com dl.serverspeeder.com;
+
+    charset utf8;
+
+    location / {
+        proxy_pass http://127.0.0.1:4000/;
+    }
+}
 ```
