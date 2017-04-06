@@ -9,9 +9,10 @@ app.use(logger('dev'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.all("/ac.do", require("./Actions/AcServlet"));
 app.all("/regenspeeder/lic", require("./Actions/Lic"));
 
-app.listen(config.ServicePort, () => {
-	console.log('Listening port:' + config.ServicePort);
+var port = process.env.PORT || config.ServicePort;
+
+app.listen(port, () => {
+	console.log('Listening port:' + port);
 });
